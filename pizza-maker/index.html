@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pizza Maker - Create your perfect custom pizza">
+    <meta name="keywords" content="pizza, maker, custom, food, order">
+    <title>Pizza Maker</title>
+    
+    <!-- Favicon using pizza emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>🍕 Pizza Maker Studio</h1>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#builder">Builder</a></li>
+                        <li><a href="#recipes">Recipes</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Create Your Perfect Pizza</h2>
+                <p>Build your dream pizza with fresh ingredients and endless customization options.</p>
+                <button class="cta-button">Start Building</button>
+            </div>
+        </section>
+
+        <!-- Pizza Builder Section -->
+        <section id="builder" class="builder-section">
+            <div class="container">
+                <h2>Pizza Builder</h2>
+                <div class="builder-container">
+                    <div class="pizza-preview">
+                        <div class="pizza-canvas">
+                            <!-- Pizza visualization will be rendered here -->
+                            <div class="pizza-base"></div>
+                        </div>
+                    </div>
+                    <div class="builder-controls">
+                        <div class="ingredient-categories">
+                            <!-- Ingredient selection will be dynamically generated -->
+                        </div>
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-content">
+                                <!-- Order details will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pizza Recipes Section -->
+        <section id="recipes" class="recipes-section">
+            <div class="container">
+                <h2>Pizza Recipes</h2>
+                <div class="recipes-container">
+                    <div class="pizza-list">
+                        <h3>Choose a Recipe</h3>
+                        <div class="pizza-list-items">
+                            <!-- Pizza list will be dynamically generated -->
+                        </div>
+                    </div>
+                    <div class="pizza-details">
+                        <div class="recipe-header">
+                            <!-- Recipe title and info will be displayed here -->
+                        </div>
+                        <div class="recipe-content">
+                            <div class="ingredients-section">
+                                <h4>Ingredients</h4>
+                                <div class="ingredients-list">
+                                    <!-- Ingredients will be displayed here -->
+                                </div>
+                            </div>
+                            <div class="steps-section">
+                                <h4>Preparation Steps</h4>
+                                <div class="steps-list">
+                                    <!-- Preparation steps will be displayed here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>Popular Pizzas</h2>
+                <div class="pizza-grid">
+                    <!-- Popular pizza options will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Our Pizza</h2>
+                <div class="about-content">
+                    <p>We use only the freshest ingredients to create authentic, delicious pizzas. Our interactive pizza builder lets you customize every aspect of your meal.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🍕 Pizza Maker</h3>
+                    <p>Creating perfect pizzas since 2024</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#builder">Builder</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>📞 (555) 123-4567</li>
+                            <li>📧 info@pizzamaker.com</li>
+                            <li>📍 123 Pizza Street</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pizza Maker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
