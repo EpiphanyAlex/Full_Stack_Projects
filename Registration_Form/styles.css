@@ -7,35 +7,38 @@
 
 body {
     background-color: #fff;
-    padding: 1rem;
+    padding: 1.5rem;
+    line-height: 1.6; /* Improved readability */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center the form container horizontally */
+    align-items: center; /* Center the form container vertically */
 }
 
 .form-container {
-    background-color: #ebebeb;
+    background-color: #f5f7f8;
     max-width: 600px;  /* Maximum width for the form container */
     width: 100%; 
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-
+    overflow: hidden; /* Prevents overflow of content */
 }
 
 header h1 {
     text-align: center;
+    font-size: 2.5em;
     color: #333; /* Darker color for better contrast */
     margin-bottom: 1rem;
 }
 
 .basic-info {
-    padding: 2rem 1rem;
-    text-align: left;
+    padding: 1rem 1rem;
 }
 
 .basic-info h2 {
+    font-size: 1.6em;
     margin-bottom: 1rem;
+    color: #222;
 }
 
 .green-dot {
@@ -51,14 +54,56 @@ header h1 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
+}
+
+label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 18px; /* Consistent font size */
+    display: block; /* Ensures labels take full width */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 2px solid; /* Light gray border */
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #e8eeef;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover,
+select:hover,
+textarea:hover, 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    background-color: #dfe2e5; /* Slightly darker on hover/focus */
+    outline: 1px solid #667eea; /* Blue outline on focus */
+}
+
+/* HTML5 Form Validation Style - Meets Validation Requirements */
+input:valid {
+    border-color: #10b981; /* Light green border for valid inputs */
+}
+input:invalid {
+    border-color: #ef4444; /* Light red border for invalid inputs */
 }
 
 .other-details {
     padding: 2rem 1rem;
-    text-align: left;
 }
 
 .other-details h2 {
