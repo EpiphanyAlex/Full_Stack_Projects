@@ -35,7 +35,7 @@ body {
 
 /* ID Selectors */
 #ux-research {
-    background: linear-gradient(135deg, #7a93ff 0%, #b08ad5 100%); /* Gradient background */
+    background: linear-gradient(135deg, #6883fc 0%, #b08ad5 100%); /* Gradient background */
 }
 
 #bootcamp {
@@ -51,18 +51,18 @@ body {
     right: 0;
     width: 100%;
     height: 100%; /* Full coverage of the card */
-    opacity: 0.1; /* Reduced opacity for background image */
+    opacity: 0.15; /* Reduced opacity for background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Ensures the image covers the entire area without repeating */
 }
 
 .ux-research-image {
-    background-image: url('/images/UX_research.jpeg'); /* Replace with actual image path */
+    background-image: url('images/UX_research.jpeg'); /* Replace with actual image path */
 }
 
 .bootcamp-image {
-    background-image: url('/images/bootcamp.jpeg');
+    background-image: url('images/Bootcamp.jpeg');
 }
 
 /* tag selectors */

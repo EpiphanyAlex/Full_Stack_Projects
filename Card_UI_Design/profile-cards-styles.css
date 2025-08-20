@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f5; /* Light background for contrast */
+}
+
+.cards {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.card {
+    width: 420px;
+    height: 260px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    position: relative; /* Relative positioning for child elements */
+    overflow: hidden; /* Prevents overflow of content */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ID selectors */
+#bobby-jennings {
+    background-color: #ffffff;
+    color: #333;
+}
+
+#donald-bridges {
+    background: linear-gradient(135deg, #575afe 0%, #ccb2ff 100%);
+    color: #ffffff;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular images */
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#bobby-jennings .profile-image {
+    background-image: url('images/Male_avatar.jpeg');
+}
+
+#donald-bridges .profile-image {
+    background-image: url('images/Female_avatar.jpeg');
+    border: 2px solid #ccc;
+}
+
+.profile-info {
+    flex: 1; /* Takes up remaining space */
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 12px;
+    color: #666;
+}
+
+/* composite selectors will have better weight */
+#donald-bridges .title {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.company {
+    color: #7b68ee;
+    font-weight: bold;
+}
+
+#donald-bridges .company {
+    color: #ffffff;
+}
+
+.star-rating {
+    display: flex;
+    gap: 2px;
+    position: absolute; /* Positioning for star rating */
+    top: 0;
+    right: 0;
+}
+
+.star {
+    font-size: 12px;
+}
+
+.star-orange {
+    color: orange;
+}
+.star-white {
+    color: white;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+#bobby-jennings .description {
+    color: #666;
+}
+#donald-bridges .description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards */
+    }
+    .card {
+        width: 90%; /* Full width on small screens */
+        max-width: 420px; /* Limit max width */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}
