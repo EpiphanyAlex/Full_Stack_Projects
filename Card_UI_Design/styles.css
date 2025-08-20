@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class selectors */
+.cards {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.card {
+    width: 420px;
+    height: 260px;
+    border-radius: 20px;
+    padding: 50px 30px;
+    position: relative; /* Relative positioning for child elements */
+    overflow: hidden; /* Prevents overflow of content */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white; /* Ensures text is readable */
+}
+
+/* ID Selectors */
+#ux-research {
+    background: linear-gradient(135deg, #7a93ff 0%, #b08ad5 100%); /* Gradient background */
+}
+
+#bootcamp {
+    background: linear-gradient(135deg, #0037ff 0%, #00feed 100%);
+}
+
+.ux-research-image,
+.bootcamp-image {
+    position: absolute; /* Absolute positioning to cover the card */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; /* Full coverage of the card */
+    opacity: 0.1; /* Reduced opacity for background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Ensures the image covers the entire area without repeating */
+}
+
+.ux-research-image {
+    background-image: url('/images/UX_research.jpeg'); /* Replace with actual image path */
+}
+
+.bootcamp-image {
+    background-image: url('/images/bootcamp.jpeg');
+}
+
+/* tag selectors */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative; /* Ensures text is above the background image */
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 20px;
+    opacity: 0.85; /* Slightly reduced opacity for better readability */
+    position: relative;
+}
+
+.learn-more-btn {
+    padding: 13px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+    position: relative; 
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards */
+    }
+    .card {
+        width: 90%; /* Make cards responsive */
+        max-width: 400px; /* Limit maximum width */
+    }
+}
