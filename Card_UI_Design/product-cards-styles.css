@@ -13,7 +13,7 @@ body {
 }
 
 /* class selectors */
-.cards {
+.product-cards {
     width: 100%;
     gap: 20px;
     display: flex;
@@ -22,7 +22,7 @@ body {
     flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
 }
 
-.card {
+.product-cards__card {
     width: 420px;
     height: 260px;
     border-radius: 20px;
@@ -34,16 +34,15 @@ body {
 }
 
 /* ID Selectors */
-#ux-research {
+.product-cards__card--ux-research {
     background: linear-gradient(135deg, #6883fc 0%, #b08ad5 100%); /* Gradient background */
 }
 
-#bootcamp {
+.product-cards__card--bootcamp {
     background: linear-gradient(135deg, #0037ff 0%, #00feed 100%);
 }
 
-.ux-research-image,
-.bootcamp-image {
+.product-cards__image {
     position: absolute; /* Absolute positioning to cover the card */
     top: 0;
     left: 0;
@@ -57,11 +56,11 @@ body {
     background-repeat: no-repeat; /* Ensures the image covers the entire area without repeating */
 }
 
-.ux-research-image {
+.product-cards__image--ux-research {
     background-image: url('images/UX_research.jpeg'); /* Replace with actual image path */
 }
 
-.bootcamp-image {
+.product-cards__image--bootcamp {
     background-image: url('images/Bootcamp.jpeg');
 }
 
@@ -84,7 +83,7 @@ p {
     position: relative;
 }
 
-.learn-more-btn {
+.product-cards__button {
     padding: 13px 30px;
     font-size: 12px;
     font-weight: bold;
@@ -98,18 +97,18 @@ p {
     cursor: pointer;
 }
 
-.learn-more-btn:hover {
+.product-cards__button:hover {
     transform: translateY(-2px);
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .cards {
+    .product-cards {
         flex-direction: column; /* Stack cards vertically on smaller screens */
         align-items: center; /* Center cards */
     }
-    .card {
+    .product-cards__card {
         width: 90%; /* Make cards responsive */
         max-width: 400px; /* Limit maximum width */
     }

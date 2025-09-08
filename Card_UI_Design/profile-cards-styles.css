@@ -12,7 +12,7 @@ body {
     background-color: #f0f0f5; /* Light background for contrast */
 }
 
-.cards {
+.profile-cards {
     width: 100%;
     gap: 20px;
     display: flex;
@@ -21,7 +21,7 @@ body {
     flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
 }
 
-.card {
+.profile-cards__card {
     width: 420px;
     height: 260px;
     border-radius: 20px;
@@ -32,30 +32,30 @@ body {
     transition: all 0.3s ease; /* Smooth transition */
 }
 
-.card:hover {
+.profile-cards__card:hover {
     transform: translateY(-5px); /* Subtle lift effect on hover */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* ID selectors */
-#bobby-jennings {
+.profile-cards__card--bobby-jennings {
     background-color: #ffffff;
     color: #333;
 }
 
-#donald-bridges {
+.profile-cards__card--donald-bridges {
     background: linear-gradient(135deg, #575afe 0%, #ccb2ff 100%);
     color: #ffffff;
 }
 
-.card-header {
+.profile-cards__header {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     position: relative;
 }
 
-.profile-image {
+.profile-cards__avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%; /* Circular images */
@@ -65,16 +65,16 @@ body {
     background-repeat: no-repeat;
 }
 
-#bobby-jennings .profile-image {
+.profile-cards__card--bobby-jennings .profile-cards__avatar {
     background-image: url('images/Male_avatar.jpeg');
 }
 
-#donald-bridges .profile-image {
+.profile-cards__card--donald-bridges .profile-cards__avatar {
     background-image: url('images/Female_avatar.jpeg');
     border: 2px solid #ccc;
 }
 
-.profile-info {
+.profile-cards__info {
     flex: 1; /* Takes up remaining space */
 }
 
@@ -85,26 +85,26 @@ h3 {
     margin-bottom: 5px;
 }
 
-.title {
+.profile-cards__title {
     font-size: 12px;
     color: #666;
 }
 
 /* composite selectors will have better weight */
-#donald-bridges .title {
+.profile-cards__card--donald-bridges .profile-cards__title {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.company {
+.profile-cards__company {
     color: #7b68ee;
     font-weight: bold;
 }
 
-#donald-bridges .company {
+.profile-cards__card--donald-bridges .profile-cards__company {
     color: #ffffff;
 }
 
-.star-rating {
+.profile-cards__rating {
     display: flex;
     gap: 2px;
     position: absolute; /* Positioning for star rating */
@@ -112,37 +112,37 @@ h3 {
     right: 0;
 }
 
-.star {
+.profile-cards__star {
     font-size: 12px;
 }
 
-.star-orange {
+.profile-cards__star--orange {
     color: orange;
 }
-.star-white {
+.profile-cards__star--white {
     color: white;
 }
 
-.description {
+.profile-cards__description {
     font-size: 14px;
     line-height: 1.5;
     margin-top: 20px;
 }
 
-#bobby-jennings .description {
+.profile-cards__card--bobby-jennings .profile-cards__description {
     color: #666;
 }
-#donald-bridges .description {
+.profile-cards__card--donald-bridges .profile-cards__description {
     color: rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .cards {
+    .profile-cards {
         flex-direction: column; /* Stack cards vertically on smaller screens */
         align-items: center; /* Center cards */
     }
-    .card {
+    .profile-cards__card {
         width: 90%; /* Full width on small screens */
         max-width: 420px; /* Limit max width */
         margin-bottom: 20px; /* Space between cards */
